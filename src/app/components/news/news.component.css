@@ -1,0 +1,52 @@
+
+.searchterm {
+    width: calc( 50% - 90px );
+}
+.searchbtn {
+    width: 85px;
+}
+select  {
+    /* font-size: 26px; */
+    width: 25%;
+}
+
+input {
+    /* font-size: 26px; */
+}
+
+p {
+    font-style: normal;
+     /* font-size: 15px; */
+     font-size: 16px;
+     
+
+}
+h1 {
+    width:100%;
+    font-size: 20px;
+    margin:3px 
+}
+
+.items {
+    display: flex;
+    flex-wrap:wrap;
+    overflow-y: auto;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.item {
+    display: flex;
+    width: 100%;
+}
+.textdiv {
+    margin-top:20px;
+    width:50%;
+    margin-left:3px;
+}
+.imgdiv {
+    margin:10px;
+    width: 50%;
+}

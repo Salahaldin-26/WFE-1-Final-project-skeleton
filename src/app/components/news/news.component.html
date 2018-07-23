@@ -1,0 +1,44 @@
+<div id="search">
+  <select id="countycode" [(ngModel)]="countrycode">
+    <option value="">Select Country:</option>
+    <option value="us">USA</option>
+    <option value="sd">SUDAN</option>
+    <option value="fr">FRANCE</option>
+    <option value="kp">KOREA</option>
+    <option value="gr">GREECE</option>
+    <option value="tr">TURKIA</option>
+    <option value="gh">GHANA</option>
+    <option value="ca">CANADA</option>
+  </select>
+  <select id="category" [(ngModel)]="category">
+    <option value="general">General</option>
+    <option value="business">Business</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="sport">Sport</option>
+    <option value="technology">Technology</option>
+    <option value="science">Science</option>
+    <option value="health">health</option>
+  </select>
+  <input type="text" class="searchterm" id="searchtxt"  [(ngModel)]="searchtext" />
+  <input id="search" class="searchbtn" type="button" value="search" (click)="refreshNews()" />
+  </div>
+  <div class="items">
+    <div class="item" *ngFor="let singleArticle of articles">
+      
+
+      <div class="imgdiv">
+          <h1>{{singleArticle.getTitle()}}</h1>
+        <img src="{{singleArticle.getUrlToImage()}}" width=100% height=auto>
+      </div>
+      <div class="textdiv">
+          <p>{{singleArticle.getDescription()}}<p>
+        <!-- <P>The Sudan or Sudan also known as North Sudan since South Sudan's independence and officially the Republic of the -->
+          <!-- Sudan, is a country in Northeast Africa. Wikipedia Capital: Khartoum Currency: Sudanese pound President: Omar al-Bashir -->
+          <!-- Population: 38.65 million (2016), 39.58 million (2016) World Bank Official languages: Arabic, English</P> -->
+        <p>
+            <a href="{{singleArticle.getUrl()}}">Read more</a>
+          <!-- <a href="https://www. Wikipedia.com">Read more</a> -->
+        </p>
+      </div>
+    </div>
+  </div>
